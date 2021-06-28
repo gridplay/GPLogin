@@ -2,6 +2,7 @@
 namespace GPLogin;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
+use Log;
 class Provider extends AbstractProvider {
     public const IDENTIFIER = 'GPLogin';
     protected $scopes = ['user'];
@@ -28,9 +29,9 @@ class Provider extends AbstractProvider {
         return json_decode($response->getBody()->getContents(), true);
     }
     protected function mapUserToObject(array $user) {
+        Log::debug($user);
         return (new User())->setRaw($user)->map([
             'id'       => $user['id'],
-            'nickname' => $user['name'],
             'name'     => $user['name'],
             'uuid'     => $user['uuid'],
         ]);
