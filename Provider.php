@@ -32,6 +32,7 @@ class Provider extends AbstractProvider {
             'id'       => $user['id'],
             'name'     => $user['name'],
             'uuid'     => $user['uuid'],
+            'avatar'   => $user['avatar']
         ]);
     }
     protected function getTokenFields($code) {
