@@ -8,12 +8,12 @@ class Provider extends AbstractProvider {
     protected $scopeSeparator = ' ';
     protected function getAuthUrl($state) {
         return $this->buildAuthUrlFromBase(
-            'https://gridplay.net/oauth2/authorize',
+            'https://gridplay.net/oauth/authorize',
             $state
         );
     }
     protected function getTokenUrl() {
-        return 'https://gridplay.net/oauth2/token';
+        return 'https://gridplay.net/oauth/token';
     }
     protected function getUserByToken($token) {
         $response = $this->getHttpClient()->get(
