@@ -17,7 +17,7 @@ class Provider extends AbstractProvider {
     }
     protected function getUserByToken($token) {
         $response = $this->getHttpClient()->get(
-            'https://gridplay.net/api/users/@me',
+            'https://gridplay.net/api/users',
             [
                 'headers' => [
                     'Authorization' => 'Bearer '.$token,
