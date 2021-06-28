@@ -40,7 +40,11 @@ return Socialite::driver('gplogin')->redirect();
 ```
 
 ### Returned User fields
-
+```php
+$user = Socialite::driver('gplogin')->user();
+$user->id
+```
 - ``id``
 - ``name``
 - ``uuid``
+- ``avatar``
