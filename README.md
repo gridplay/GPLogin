@@ -48,3 +48,5 @@ $user->id
 - ``name``
 - ``uuid``
 - ``avatar``
+- ``rank``
+
