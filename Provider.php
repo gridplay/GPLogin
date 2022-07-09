@@ -31,8 +31,7 @@ class Provider extends AbstractProvider {
         return (new User())->setRaw($user)->map([
             'id'       => $user['id'],
             'name'     => $user['name'],
-            'uuid'     => $user['uuid'],
-            'avatar'   => $user['avatar']
+            'uuid'     => $user['uuid']
         ]);
     }
     protected function getTokenFields($code) {

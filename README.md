@@ -47,5 +47,4 @@ $user->id
 - ``id``
 - ``name``
 - ``uuid``
-- ``avatar``
 
